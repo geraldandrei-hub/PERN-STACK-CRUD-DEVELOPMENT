@@ -1,0 +1,31 @@
+{
+  "name": "pern-stack-crud-development",
+  "version": "1.0.0",
+  "description": "A full-stack **PERN** (PostgreSQL · Express · React · Node.js) application for tracking documents through a simple status workflow. Users can create, view, edit, and delete documents, each with a title, author, description, and lifecycle status.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geraldandrei-hub/PERN-STACK-CRUD-DEVELOPMENT.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/geraldandrei-hub/PERN-STACK-CRUD-DEVELOPMENT/issues"
+  },
+  "homepage": "https://github.com/geraldandrei-hub/PERN-STACK-CRUD-DEVELOPMENT#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "pg": "^8.22.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
