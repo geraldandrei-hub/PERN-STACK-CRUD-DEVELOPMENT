@@ -1,5 +1,5 @@
 const {ZodError} = require('zod');
-const {AppError} = require('./errors');
+const {AppError} = require('../errors');
 
 function errorHandler(err, req, res, next) {
     if (err instanceof ZodError) {
