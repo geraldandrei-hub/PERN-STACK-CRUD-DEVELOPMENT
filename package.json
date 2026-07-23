@@ -4,6 +4,8 @@
   "description": "A full-stack **PERN** (PostgreSQL · Express · React · Node.js) application for tracking documents through a simple status workflow. Users can create, view, edit, and delete documents, each with a title, author, description, and lifecycle status.",
   "main": "index.js",
   "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "migrate:up": "node-pg-migrate up",
     "migrate:down": "node-pg-migrate down",
