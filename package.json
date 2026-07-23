@@ -4,7 +4,11 @@
   "description": "A full-stack **PERN** (PostgreSQL · Express · React · Node.js) application for tracking documents through a simple status workflow. Users can create, view, edit, and delete documents, each with a title, author, description, and lifecycle status.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate:up": "node-pg-migrate up",
+    "migrate:down": "node-pg-migrate down",
+    "migrate:create": "node-pg-migrate create -j js"
+    
   },
   "repository": {
     "type": "git",
@@ -19,13 +23,17 @@
   },
   "homepage": "https://github.com/geraldandrei-hub/PERN-STACK-CRUD-DEVELOPMENT#readme",
   "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
     "pg": "^8.22.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {
+    "node-pg-migrate": "^9.0.0",
     "nodemon": "^3.1.14"
   }
 }
