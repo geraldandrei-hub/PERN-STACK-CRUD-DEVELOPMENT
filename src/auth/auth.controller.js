@@ -8,7 +8,8 @@ function cookieOptions() {
         secure: process.env.NODE_ENV === 'production', // HTTPS-only in prod, relaxed on localhost
         maxAge: COOKIE_MAX_AGE,
     };
-    
+}
+
 // HTTP only: read the request, call ONE service method, shape the response.
 // Methods are bound so they can be passed directly as route handlers.
 
@@ -60,8 +61,6 @@ class AuthController {
             next(err);
         }
     }
-}
-
 }
 
 module.exports = AuthController;

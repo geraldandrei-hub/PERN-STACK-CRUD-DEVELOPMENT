@@ -26,7 +26,7 @@ class AuthRepository {
         const {rows} = await this.pool.query(
             `INSERT INTO users (email,password_hash)
              VALUES ($1,$2)
-             RETURNING id, email, created_at`
+             RETURNING id, email, created_at`,
              [email, passwordHash]
         );
         return rows[0] || null;
