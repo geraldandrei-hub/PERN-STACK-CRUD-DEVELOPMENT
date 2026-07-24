@@ -16,7 +16,7 @@ class DocumentRepository {
         return rows;
     }
 
-    async findByIdForOwner(id) {
+    async findByIdForOwner(id, ownerId) {
         const {rows} = await this.pool.query (
             `SELECT * FROM documents WHERE id = $1 AND owner_id = $2`,
             [id, ownerId]
@@ -24,7 +24,7 @@ class DocumentRepository {
         return rows[0] || null;
     }
 
-    async create({ ownerId, title, description, status, authos}) {
+    async create({ ownerId, title, description, status, author}) {
         const {rows} = await this.pool.query (
             `INSERT INTO documents (owner_id, title, description, status,author)
              VALUES ($1, $2, $3, COALESCE($4::document_status, 'Draft'), $5)
