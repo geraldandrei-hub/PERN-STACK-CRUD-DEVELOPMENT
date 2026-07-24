@@ -21,7 +21,13 @@ class DocumentService {
 
     async update(id, ownerId, fields) {
         const updated = await this.repo.update(id, ownerId, fields);
-        if (!updated) throw new notFoundError('Document now found');
+        if (!updated) throw new notFoundError('Document not found');
+        return updated;
+    }
+
+    async remove(id, ownerId) {
+        const deleted = await this.repo.deleteForOwner(id, ownerId);
+        if(!deleted) throw new notFoundError('Document not found');
     }
 }
 
